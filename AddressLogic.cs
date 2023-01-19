@@ -186,5 +186,36 @@ namespace day27addressbook
                 return;
             }
         }
+        // Uc12 Search the data by City State and Zip;     
+        public void SortByCity_State_Zip()
+        {
+            Console.WriteLine("Hint 1.Sorted by city \n 2.Sorted by State \n 3.Sorted by Zip");
+            int num = Convert.ToInt16(Console.ReadLine());
+            if (num == 1)
+            {
+                person1.Sort((x, y) => string.Compare(x.State, y.State));
+                DisplayList();
+                return;
+            }
+            else if (num == 2)
+            {
+                person1.Sort((x, y) => string.Compare(x.City, y.City));
+                DisplayList();
+            }
+            else if (num == 3)
+            {
+                person1.Sort((x, y) => string.Compare(x.Zip, y.Zip));
+                DisplayList();
+            }
+        }
+        //Display For State ,Zip,City list
+        public void DisplayList()
+        {
+            foreach (var data in person1)
+            {
+                Console.WriteLine("Name " + data.FirstName + " " + data.LastName);
+            }
+
+        }
     }
 }

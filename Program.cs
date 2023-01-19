@@ -14,7 +14,7 @@ namespace day27addressbook
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine("enter\n1.add person\n2.edit person details\n3.remove person\n4.Display\n5.CreateDitionary\n6.DispalayDictionary\n7.ViewLambdaExpression\n8.exit");
+                Console.WriteLine("enter\n1.add person\n2.edit person details\n3.remove person\n4.Display\n5.CreateDitionary\n6.DispalayDictionary\n7.ViewLambdaExpression\n8.Sort The Address book list\n9.SortByCity_State_Zip\n10.exit");
                 Console.WriteLine("please choose any one");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -48,6 +48,9 @@ namespace day27addressbook
                         addressLogic.SortAddressBookData();
                         break;
                     case 9:
+                        addressLogic.SortByCity_State_Zip();
+                        break;
+                    case 10:
                         choice = false;
                         break;
 
